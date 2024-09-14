@@ -13,7 +13,6 @@ export function useTodo() {
 
   useEffect(() => {
     localStorage.setItem(TODO_KEY, JSON.stringify(todos))
-    console.log(todos)
   }, [todos])
 
   const addTodo = (title: string, description: string) => {
@@ -37,7 +36,6 @@ export function useTodo() {
   }
 
   const toggleDone = (id: number) => {
-    console.log(id)
     setTodos(todos.map((todo) => (todo.id === id ? { ...todo, done: !todo.done } : todo)))
   }
 

@@ -27,7 +27,6 @@ export function TodoModal({ onClose, editingTodo, onCreate, onEdit }: TodoModalP
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values)
       if (editingTodo) {
         onEdit?.(editingTodo.id, values.title, values.description)
       } else {
